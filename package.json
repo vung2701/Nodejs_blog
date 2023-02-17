@@ -12,9 +12,8 @@
   "author": "vung2701",
   "license": "ISC",
   "hooks": {
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-stage"
   },
-
   "lint-staged": {
     "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
   },
