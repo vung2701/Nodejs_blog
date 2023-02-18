@@ -7,10 +7,6 @@ function route(app) {
     app.use('/search', siteRouter);
 
     app.use('/', siteRouter);
-
-    app.get('/search', (req, res) => {
-        res.render('search');
-    });
 }
 
 module.exports = route;
