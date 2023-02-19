@@ -7,7 +7,7 @@ class SiteController {
         Course.find({})
             .then((courses) => {
                 // bao mat object cua handlebars
-                res.render('home', { courses: multiMongooseToObject });
+                res.render('home', { courses: multiMongooseToObject(courses) });
             })
             .catch(next);
     }

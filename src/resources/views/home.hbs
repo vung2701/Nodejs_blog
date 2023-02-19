@@ -2,14 +2,16 @@
     <div class='row'>
         {{#each courses}}
             <div class='col col-sm-6 col-lg-4'>
-                <div class='card'>
-                    <img class='card-img-top' src={{this.image}} alt={{this.name}} />
-                    <div class='card-body'>
-                        <h5 class='card-title'>{{this.name}}</h5>
-                        <p class='card-text'>{{this.description}}</p>
-                        <a href='#' class='btn btn-primary'>Xem khoá học</a>
+                <a href='/courses/{{this.slug}}'>
+                    <div class='card'>
+                        <img class='card-img-top' src={{this.image}} alt={{this.name}} />
+                        <div class='card-body'>
+                            <h5 class='card-title'>{{this.name}}</h5>
+                            <p class='card-text'>{{this.description}}</p>
+                            <a href='/courses/{{this.slug}}' class='btn btn-primary'>Xem khoá học</a>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         {{/each}}
     </div>
