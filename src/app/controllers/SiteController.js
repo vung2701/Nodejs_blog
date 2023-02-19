@@ -1,18 +1,18 @@
+const Course = require('../models/Course');
+const { multiMongooseToObject } = require('../../untils/mongoose');
+
 class SiteController {
     // GET / Home
-    home(req, res) {
-        Course.find({}, function (err, courses) {
-            if (!err) {
-                res.json(courses);
-            } else {
-                res.status(400).json({ error: 'ERROR!!!' });
-            }
-        });
-
-        // res.render('home');
+    home(req, res, next) {
+        Course.find({})
+            .then((courses) => {
+                // bao mat object cua handlebars
+                res.render('home', { courses: multiMongooseToObject });
+            })
+            .catch(next);
     }
 
-    // GET / seaerch
+    // GET / search
     search(req, res) {
         res.render('search');
     }
