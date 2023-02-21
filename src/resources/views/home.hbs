@@ -4,7 +4,12 @@
             <div class='col col-sm-6 col-lg-4'>
                 <a href='/courses/{{this.slug}}'>
                     <div class='card'>
-                        <img class='card-img-top' src={{this.image}} alt={{this.name}} />
+                        <img
+                            class='card-img-top'
+                            src={{this.image}}
+                            {{!-- src='https://img.youtube.com/vi/{{this.videoId}}/sddefault.jpg' --}}
+                            alt={{this.name}}
+                        />
                         <div class='card-body'>
                             <h5 class='card-title'>{{this.name}}</h5>
                             <p class='card-text'>{{this.description}}</p>
