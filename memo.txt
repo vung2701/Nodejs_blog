@@ -1,0 +1,3 @@
+//killport
+netstat -ano | findstr 3000
+taskkill /F /PID 4260
