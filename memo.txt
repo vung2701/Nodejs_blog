@@ -1,3 +1,26 @@
-//killport
+## killport
+
 netstat -ano | findstr 3000
 taskkill /F /PID 4260
+
+## Middleware
+
+### Ý nghĩa
+- Phần mềm trung gian ( đứng giữa các thành phần trong mô hình phần mềm)
+
+Browser ============(req)=============> Middleware ==============(req)==============> Server
+Browser <============(res)============= Middleware <==============(res)============== Server
+
+### Vai trò
+- thực hiện các nhiệm vụ trung chuyển giữa các thành phần
+
+1. Xác minh (Validate)
+2. Ngăn chặn (Validate Failed)
+3. Truyền   (validate Passed)
+4. Chỉnh sửa/ thay đổi (Update)
+
+
+### Ứng dụng
+- Dựng chức năng xác thực(Authentication)
+- Dựng chức năng phân quyền(Authorization)
+- Để chia sẻ giá trị của biến tới tất cả các views
